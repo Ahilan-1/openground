@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Blindspots • OpenGround</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+  <div class="shell">
+    <aside class="side">
+      <div class="brand">
+        <div class="logo">OG</div>
+        <div class="bt">
+          <div class="bn">Blindspots</div>
+          <div class="bs">Stories heavily covered by one side, ignored by the other.</div>
+        </div>
+      </div>
+
+      <div class="sideActions">
+        <a class="btn ghost" href="/">← Back</a>
+        <button id="themeBtn" class="btn ghost">Toggle theme</button>
+        <button id="refreshBtn" class="btn primary">Refresh</button>
+      </div>
+
+      <div class="sideFoot">
+        <div class="meta" id="updatedText">—</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <div class="hero">
+          <h1>Blindspots Feed</h1>
+          <p>Best way to keep this addictive: “What did I miss?”</p>
+        </div>
+      </header>
+
+      <section id="grid" class="grid"></section>
+    </main>
+  </div>
+
+  <script src="/static/blindspots.js"></script>
+</body>
+</html>

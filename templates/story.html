@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Story • OpenGround</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css"/>
+  <style>
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      padding: 40px 0;
+    }
+    
+    .timelinePhase {
+      margin-bottom: 48px;
+      position: relative;
+    }
+    
+    .phaseHeader {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--border);
+    }
+    
+    .phaseNumber {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #7c3aed);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .phaseInfo {
+      flex: 1;
+    }
+    
+    .phaseTime {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    
+    .phaseStats {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    
+    .phaseBias {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 11px;
+    }
+    
+    .phaseBias.left-leaning {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--left);
+    }
+    
+    .phaseBias.right-leaning {
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--right);
+    }
+    
+    .phaseBias.balanced {
+      background: rgba(139, 92, 246, 0.1);
+      color: var(--center);
+    }
+    
+    .phaseBias.mixed {
+      background: rgba(148, 163, 184, 0.1);
+      color: var(--unknown);
+    }
+    
+    .timelineArticles {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-left: 64px;
+    }
+    
+    .timelineArticle {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      position: relative;
+      transition: all var(--transition);
+    }
+    
+    .timelineArticle::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 3px solid var(--bg);
+    }
+    
+    .timelineArticle.left::before {
+      background: var(--left);
+    }
+    
+    .timelineArticle.center::before {
+      background: var(--center);
+    }
+    
+    .timelineArticle.right::before {
+      background: var(--right);
+    }
+    
+    .timelineArticle.unknown::before {
+      background: var(--unknown);
+    }
+    
+    .timelineArticle:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    
+    .timelineArticleHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .timelinePublisher {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+    
+    .timelineTime {
+      font-size: 11px;
+      color: var(--text-subtle);
+      white-space: nowrap;
+    }
+    
+    .timelineTitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    
+    .timelineTitle a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    
+    .timelineTitle a:hover {
+      color: var(--primary);
+    }
+    
+    .narrativeShift {
+      margin: 32px 0;
+      padding: 16px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.1));
+      border-left: 4px solid #f59e0b;
+      border-radius: var(--radius-sm);
+    }
+    
+    .narrativeShift::before {
+      content: '⚡';
+      font-size: 20px;
+      margin-right: 8px;
+    }
+    
+    .narrativeShiftText {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    
+    .firstReported {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+      border: 2px solid #10b981;
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    
+    .firstReported::before {
+      content: '🏆';
+      font-size: 24px;
+      margin-right: 12px;
+    }
+    
+    .firstReportedLabel {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #10b981;
+      margin-bottom: 8px;
+    }
+    
+    .firstReportedContent {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .firstReportedPublisher {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    
+    .firstReportedTitle {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    
+    .coverageStats {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 32px;
+      padding: 20px;
+      background: var(--bg-elevated);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+    
+    .coverageStat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .coverageStatLabel {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-subtle);
+    }
+    
+    .coverageStatValue {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="shell shellStory">
+    <header class="storyTop">
+      <a class="btn ghost" href="/">← Back</a>
+      <div class="storyTopRight">
+        <button id="themeBtn" class="btn ghost">Toggle theme</button>
+      </div>
+    </header>
+    
+    <main class="storyMain">
+      <div class="storyHeader">
+        <div class="storyTitle" id="title">Loading…</div>
+        <div class="storyMeta">
+          <span class="pill" id="coveragePill">— sources</span>
+          <span class="pill" id="leanPill">—</span>
+          <span class="pill" id="scorePill">Bias Score —</span>
+        </div>
+        <div class="biasBarWrap">
+          <div class="biasLabels">
+            <span>Left</span><span>Center</span><span>Right</span><span>Unknown</span>
+          </div>
+          <div class="biasBar" id="bar"></div>
+        </div>
+      </div>
+      
+      <div class="tabs">
+        <button class="tab active" data-tab="compare">Compare</button>
+        <button class="tab" data-tab="timeline">📊 Timeline</button>
+        <button class="tab" data-tab="all">All coverage</button>
+      </div>
+      
+      <section id="compare" class="panel"></section>
+      <section id="timeline" class="panel hidden"></section>
+      <section id="all" class="panel hidden"></section>
+    </main>
+  </div>
+  
+  <script>
+    window.__STORY_ID__ = "{{ story_id }}";
+  </script>
+  <script src="/static/story.js"></script>
+</body>
+</html>

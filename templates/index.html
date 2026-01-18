@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>OpenGround</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+  <div class="shell">
+    <aside class="side">
+      <div class="brand">
+        <div class="logo">OG</div>
+        <div class="bt">
+          <div class="bn">OpenGround</div>
+          <div class="bs">Compare coverage. Spot blindspots.</div>
+        </div>
+      </div>
+      
+      <div class="sideActions">
+        <button id="refreshBtn" class="btn primary">Refresh</button>
+        <button id="themeBtn" class="btn ghost">Toggle theme</button>
+        <a class="btn ghost" href="/trending">🔥 Trending</a>
+        <a class="btn ghost" href="/blindspots">Blindspots</a>
+      </div>
+      
+      <div class="k">CATEGORIES</div>
+      <nav id="cats" class="cats"></nav>
+      
+      <div class="sideFoot">
+        <div class="meta" id="updatedText">Not updated yet</div>
+        <div class="meta subtle">Open-source MVP • RSS based</div>
+      </div>
+    </aside>
+    
+    <main class="main">
+      <header class="top">
+        <div class="hero">
+          <h1>Today's Coverage</h1>
+          <p>Stories are clustered across outlets. Each card shows a Bias Bar and "Compare".</p>
+        </div>
+        <div class="search">
+          <input id="q" placeholder="Search stories…"/>
+          <button id="clear" class="iconBtn" title="Clear">×</button>
+        </div>
+      </header>
+      
+      <section class="stats">
+        <div class="stat">
+          <div class="sl">Category</div>
+          <div class="sv" id="statCat">All</div>
+        </div>
+        <div class="stat">
+          <div class="sl">Stories</div>
+          <div class="sv" id="statStories">0</div>
+        </div>
+        <div class="stat">
+          <div class="sl">Updated</div>
+          <div class="sv" id="statUpdated">—</div>
+        </div>
+      </section>
+      
+      <section id="grid" class="grid"></section>
+      
+      <div class="moreWrap">
+        <button id="more" class="btn ghost wide">Load more</button>
+      </div>
+    </main>
+  </div>
+  
+  <script src="/static/app.js"></script>
+</body>
+</html>
