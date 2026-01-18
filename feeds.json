@@ -1,0 +1,117 @@
+{
+  "Top": [
+    "https://feeds.bbci.co.uk/news/rss.xml",
+    "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "https://feeds.reuters.com/reuters/topNews",
+    "https://www.theguardian.com/world/rss",
+    "https://www.aljazeera.com/xml/rss/all.xml",
+    "http://feeds.abcnews.com/abcnews/topstories",
+    "https://feeds.npr.org/1001/rss.xml",
+    "http://rss.cnn.com/rss/cnn_topstories.rss",
+    "https://www.cbsnews.com/latest/rss/main"
+  ],
+  "India": [
+    "https://feeds.feedburner.com/ndtvnews-india-news",
+    "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms",
+    "https://www.thehindu.com/news/national/feeder/default.rss",
+    "https://indianexpress.com/section/india/feed/",
+    "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml",
+    "https://www.business-standard.com/rss/home_page_top_stories.rss",
+    "https://www.livemint.com/rss/news",
+    "https://www.deccanherald.com/rss-feed",
+    "https://www.news18.com/rss/india.xml",
+    "https://feeds.feedburner.com/ndtvprofit-latest"
+  ],
+  "Business": [
+    "https://feeds.bbci.co.uk/news/business/rss.xml",
+    "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "https://feeds.reuters.com/reuters/businessNews",
+    "https://www.theguardian.com/business/rss",
+    "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+    "https://www.ft.com/?format=rss",
+    "https://www.economist.com/business/rss.xml",
+    "https://feeds.bloomberg.com/markets/news.rss",
+    "https://www.business-standard.com/rss/markets-106.rss",
+    "https://www.livemint.com/rss/markets"
+  ],
+  "Tech": [
+    "https://feeds.arstechnica.com/arstechnica/technology-lab",
+    "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+    "https://www.theguardian.com/technology/rss",
+    "https://feeds.feedburner.com/TechCrunch/",
+    "https://www.wired.com/feed/rss",
+    "https://www.theverge.com/rss/index.xml",
+    "https://techcrunch.com/feed/",
+    "https://www.cnet.com/rss/news/",
+    "https://www.zdnet.com/news/rss.xml",
+    "https://www.engadget.com/rss.xml",
+    "https://feeds.feedburner.com/venturebeat/SZYF",
+    "https://www.technologyreview.com/feed/"
+  ],
+  "World": [
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "https://feeds.reuters.com/Reuters/worldNews",
+    "https://www.theguardian.com/world/rss",
+    "https://www.aljazeera.com/xml/rss/all.xml",
+    "https://feeds.washingtonpost.com/rss/world",
+    "http://rss.cnn.com/rss/cnn_world.rss",
+    "https://www.bbc.com/news/world/asia/rss.xml",
+    "https://www.bbc.com/news/world/europe/rss.xml",
+    "https://feeds.bbci.co.uk/news/world/africa/rss.xml"
+  ],
+  "Politics": [
+    "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "https://feeds.reuters.com/Reuters/PoliticsNews",
+    "https://www.theguardian.com/politics/rss",
+    "https://feeds.washingtonpost.com/rss/politics",
+    "http://rss.cnn.com/rss/cnn_allpolitics.rss",
+    "https://www.politico.com/rss/politicopicks.xml",
+    "https://thehill.com/feed/",
+    "https://feeds.feedburner.com/ndtvnews-india-news"
+  ],
+  "Science": [
+    "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
+    "https://www.theguardian.com/science/rss",
+    "https://www.sciencedaily.com/rss/all.xml",
+    "https://www.sciencemag.org/rss/news_current.xml",
+    "https://www.nature.com/nature.rss",
+    "https://phys.org/rss-feed/",
+    "https://www.space.com/feeds/all",
+    "https://www.newscientist.com/feed/home"
+  ],
+  "Health": [
+    "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+    "https://www.theguardian.com/society/health/rss",
+    "https://feeds.reuters.com/reuters/health",
+    "https://www.medicalnewstoday.com/rss",
+    "https://www.health.com/feed",
+    "https://www.healthline.com/feeds/rss",
+    "http://rss.cnn.com/rss/cnn_health.rss"
+  ],
+  "Entertainment": [
+    "https://rss.nytimes.com/services/xml/rss/nyt/Movies.xml",
+    "https://www.theguardian.com/culture/rss",
+    "https://variety.com/feed/",
+    "https://www.hollywoodreporter.com/feed/",
+    "https://www.entertainment-news.org/rss.xml",
+    "http://rss.cnn.com/rss/cnn_showbiz.rss",
+    "https://www.billboard.com/feed/"
+  ],
+  "Sports": [
+    "https://feeds.bbci.co.uk/sport/rss.xml",
+    "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+    "https://www.theguardian.com/sport/rss",
+    "https://sports.yahoo.com/rss/",
+    "http://rss.cnn.com/rss/edition_sport.rss",
+    "https://www.espn.com/espn/rss/news",
+    "https://timesofindia.indiatimes.com/rssfeeds/4719148.cms"
+  ],
+  "Environment": [
+    "https://www.theguardian.com/environment/rss",
+    "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
+    "https://www.reuters.com/subjects/environment",
+    "https://insideclimatenews.org/feed/",
+    "https://e360.yale.edu/feed"
+  ]
+}
